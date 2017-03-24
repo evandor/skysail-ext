@@ -24,19 +24,19 @@ import io.skysail.core.resources.SkysailServerResource
 import org.osgi.service.cm.ConfigurationAdmin
 
 import scala.collection.JavaConverters._
+import io.skysail.core.app.ApplicationContextId
 
 object ConfigApplication {
-  final val APP_NAME = "config"
+  final val APP_NAME = "configuration"
 }
 
 @Component(
-  immediate = true, 
-  configurationPolicy = ConfigurationPolicy.OPTIONAL, 
-  service = Array(classOf[ApplicationProvider], classOf[MenuItemProvider])
-)
+  immediate = true,
+  configurationPolicy = ConfigurationPolicy.OPTIONAL,
+  service = Array(classOf[ApplicationProvider], classOf[MenuItemProvider]))
 class ConfigApplication extends SkysailApplication(
-    ConfigApplication.APP_NAME, 
-    new ApiVersion(int2Integer(1))) with MenuItemProvider {
+  ConfigApplication.APP_NAME,
+  new ApiVersion(int2Integer(1))) with MenuItemProvider {
 
   setDescription("facebook client")
   getConnectorService().getClientProtocols().add(Protocol.HTTPS)
@@ -55,6 +55,12 @@ class ConfigApplication extends SkysailApplication(
     router.attach(new RouteBuilder("/configs/{id}", classOf[ConfigResource]));
   }
 
-  def getConfigs() = configAdmin.listConfigurations(null).map ( x => new Config(x) )
-  def getConfig(pid: String):ConfigDetails = new ConfigDetails(configAdmin.getConfiguration(pid))
+  override def getMenuEntries(): java.util.List[MenuItem] = {
+    val appMenu = new MenuItem(getName(), "/" + getName() + getApiVersion().getVersionPath());
+    appMenu.setCategory(MenuItem.Category.ADMIN_MENU);
+    return Arrays.asList(appMenu);
+  }
+
+  def getConfigs() = configAdmin.listConfigurations(null).map(x => new Config(x))
+  def getConfig(pid: String): ConfigDetails = new ConfigDetails(configAdmin.getConfiguration(pid))
 }
