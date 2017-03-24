@@ -14,8 +14,13 @@ class Config(c: Configuration) extends Entity {
 
 class ConfigDetails(c: Configuration) extends Config(c) {
   @Field var properties: String = ""
-  def getProperties() = c.getProperties.keys().map {
-    key => "<b>" + key + "</b>: " + c.getProperties().get(key).toString()
+  def getProperties(): String = c.getProperties.keys().map {
+    key => 
+      if (key.contains("password")) {
+         "<b>" + key + "</b>: ******"
+      } else {
+         "<b>" + key + "</b>: " + c.getProperties().get(key).toString()
+      }
   }.mkString("<br>\n")
 
 }
