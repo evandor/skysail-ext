@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1490359511147" name="skysail.ext.config" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1490359979126" name="skysail.ext.config" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="skysail.ext.config"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.1.0.201703241245"/>
+      <attribute name="version" type="Version" value="0.1.0.201703241252"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="cf6a9b816cac865523167b50841b479d1cfdd65ecd86bc4f26659c1d110bb01f"/>
+      <attribute name="osgi.content" value="79cdff1f001d8dfce2652398c34e4a10499525f0c09a35ae8bfe87aafc5e6f68"/>
       <attribute name="url" value="generated/skysail.ext.config.jar"/>
-      <attribute name="size" type="Long" value="13036"/>
+      <attribute name="size" type="Long" value="13037"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="skysail.ext.config"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201703241245"/>
+      <attribute name="bundle-version" type="Version" value="0.1.0.201703241252"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="skysail.ext.config"/>
-      <attribute name="bundle-version" type="Version" value="0.1.0.201703241245"/>
+      <attribute name="bundle-version" type="Version" value="0.1.0.201703241252"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="io.skysail.core.app.ApplicationProvider,io.skysail.server.menus.MenuItemProvider"/>
