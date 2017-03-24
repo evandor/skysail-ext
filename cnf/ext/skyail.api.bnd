@@ -1,0 +1,2 @@
+skysail.api:\
+    skysail.api;version=${skysail.api.version}

@@ -1,0 +1,16 @@
+cucumber: \
+    info.cukes.cucumber-core;version=latest,\
+    info.cukes.cucumber-java;version=latest,\
+    info.cukes.cucumber-junit;version=latest,\
+    info.cukes.cucumber-jvm-deps;version=latest,\
+    info.cukes.gherkin;version=2.12,\
+    io.skysail.bundled.cucumber-html;version=0.2,\
+    io.skysail.bundled.cucumber-reporting;version=2.2,\
+    org.apache.logging.log4j.api;version=2.5,\
+    com.google.gson;version=2.6,\
+    org.apache.commons.io;version=2.4,\
+    org.apache.commons.collections;version=3.2,\
+    joda-time;version=2.9,\
+    org.apache.velocity;version=1.7,\
+    io.skysail.bundled.cucumber-picocontainer;version=1.2,\
+    io.skysail.bundled.picocontainer;version=2.15

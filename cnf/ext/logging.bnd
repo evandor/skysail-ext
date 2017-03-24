@@ -1,0 +1,5 @@
+logging:\
+    ch.qos.logback.classic;version='[1.1.2,1.2)',\
+    ch.qos.logback.core;version='[1.1.2,1.2)',\
+    slf4j.api;version='[1.7.21,2)',\
+    org.jboss.logging.jboss-logging;version='[3.1.4,3.1.5)'

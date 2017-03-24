@@ -1,0 +1,55 @@
+<configuration scan="true">
+
+    <logger name="org.eclipse.jetty" level="WARN"/>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+		<encoder>
+			<!--%d{mm:ss.SSS} [%thread]-->
+			<pattern>%date{"yyyy-MM-dd HH:mm:ss,SSS"}  %-5level [%-45logger{40}] - %msg %n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="WARN_FILE" class="ch.qos.logback.core.FileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<file>generated/logs/warn.log</file>
+		<append>false</append>
+		<encoder>
+			<pattern>%date{"yyyy-MM-dd HH:mm:ss,SSS"} %-5level [%-45logger{40}] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="INFO_FILE" class="ch.qos.logback.core.FileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+		<file>generated/logs/info.log</file>
+		<append>false</append>
+		<encoder>
+			<pattern>%date{"yyyy-MM-dd HH:mm:ss,SSS"} %-5level [%-45logger{40}] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="DEBUG_FILE" class="ch.qos.logback.core.FileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+		<file>generated/logs/debug.log</file>
+		<append>false</append>
+		<encoder>
+			<pattern>%date{"yyyy-MM-dd HH:mm:ss,SSS"} %-5level [%-45logger{40}] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="INFO_FILE" />
+		<appender-ref ref="DEBUG_FILE" />
+		<appender-ref ref="WARN_FILE" />
+	</root>
+
+</configuration>

@@ -1,0 +1,12 @@
+skysail.server:\
+    skysail.server;version=${skysail.server.version},\
+    skysail.server.converter;version=${skysail.server.converter.version},\
+    skysail.server.db;version=${skysail.server.db.version},\
+    skysail.server.http;version=${skysail.server.http.version},\
+    skysail.server.osgi;version=${skysail.server.osgi.version},\
+    skysail.server.queryfilter;version=${skysail.server.queryfilter.version},\
+    skysail.server.performance.etm;version=${skysail.server.performance.etm.version},\
+    skysail.server.text.markdown;version=${skysail.server.text.markdown.version},\
+    skysail.server.text.store.bundleresource;version=${skysail.server.text.store.bundleresource.version},\
+    skysail.server.text.store.git;version=${skysail.server.text.store.git.version},\
+    ${skysail.server.um}

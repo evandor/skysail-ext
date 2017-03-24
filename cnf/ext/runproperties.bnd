@@ -1,0 +1,11 @@
+runproperties:\
+    felix.fileinstall.dir='${skysail.config.path}',\
+    felix.fileinstall.filter=.*\\.jar|.*\\.cfg,\
+    felix.fileinstall.noInitialDelay=true,\
+    felix.fileinstall.poll=1000,\
+    org.apache.felix.log.storeDebug=true,\
+    felix.fileinstall.log.level=4,\
+    logback.configurationFile=${logback.configurationFile.path}/logback.xml,\
+    product.bundle=${p}
+
+#    java.net.preferIPv4Stack=true,\

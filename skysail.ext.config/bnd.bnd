@@ -1,0 +1,27 @@
+Bundle-Name: SKYSAIL :: server :: ext :: skysail.ext.config
+
+Bundle-Version: 0.1.0.${tstamp}
+
+Import-Package: \
+    io.skysail.api.weaving,\
+    *
+
+-buildpath: \
+    ${osgi},\
+    org.osgi.service.event;version=1.3,\
+    ${testlibs},\
+    ${restlet},\
+    skysail.server;version=${skysail.server.version},\
+    skysail.server.queryfilter;version=${skysail.server.queryfilter.version},\
+    skysail.server.db;version=${skysail.server.db.version},\
+    skysail.server.testsupport;version=${skysail.server.testsupport.version},\
+    ${logging},\
+    ${commons},\
+    ${javax},\
+    de.twentyeleven.skysail.org.antlr.stringtemplate-osgi;version=4.0.8,\
+    de.twentyeleven.skysail.org.json-osgi;version=20080701.0,\
+    com.fasterxml.jackson.core.jackson-annotations;version=2.5
+
+Private-Package: \
+	io.skysail.ext.config,\
+	io.skysail.ext.config.app

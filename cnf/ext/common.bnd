@@ -1,0 +1,4 @@
+common: \
+	lombok;version=1.16,\
+	com.google.guava;version=${guava.version},\
+	slf4j.api;version=1.7	

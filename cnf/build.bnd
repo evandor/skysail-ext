@@ -1,0 +1,106 @@
+#
+#######################
+## BND BUILD SETTINGS ##
+########################
+
+javac.source: 1.8
+javac.target: 1.8
+
+-baseline: *
+
+copyright: Copyright (c) twentyeleven.de (2011, ${tstamp;yyyy}). All Rights Reserved.
+copyright.html: Copyright &copy; twentyeleven.de (2011, ${tstamp;yyyy}). All Rights Reserved.
+
+# remote: 8.0.1
+skysail.domain.version '[8.0.1,8.0.2)'
+
+# remote: 5.0.0
+skysail.api.version '[5.0.0,5.0.1)'
+
+# remote: 7.0.0
+skysail.server.version '[7.0.0,7.0.1)'
+
+# remote: 2.0.0
+skysail.server.converter.version '[2.0.0,2.0.1)'
+
+# last release: 2.0.1
+skysail.server.db.version '[2.0.1,2.0.2)'
+
+# remote: 2.0.0
+skysail.server.http.version '[2.0.0,2.0.1)'
+
+# remote: 0.3.0
+skysail.server.polymer.version '[0.3.0,0.3.1)'
+
+# remote 2.0.1
+skysail.server.queryfilter.version '[2.0.1,2.0.2)'
+
+skysail.text.version '[0.1.0,0.1.1)'
+
+# remote: 0.1.5
+skysail.server.text.markdown.version '[0.1.6,0.1.7)'
+
+# remote: 0.1.9
+skysail.server.text.store.bundleresource.version '[0.1.10,0.1.11)'
+
+# remote 0.1.2
+skysail.server.text.store.git.version '[0.1.3,0.1.4)'
+
+skysail.server.text.store.inmemory.version '[0.1.0,0.1.1)'
+
+# remote 1.0.0
+skysail.server.um.httpbasic.version '[1.0.0,1.0.1)'
+
+# remote: 1.0.0
+skysail.server.um.shiro.version '[1.0.0,1.0.1)'
+
+# remote 0.1.2
+skysail.server.um.verifier.filebased.version '[0.1.2,0.1.3)'
+
+# remote: 0.1.2
+skysail.server.um.repository.filebased.version '[0.1.2,0.1.3)'
+
+# remote: 0.1.0:
+skysail.server.um.repository.fixed.version '[0.1.1,0.1.2)'
+
+# remote: 2.0.0
+skysail.server.testsupport.version '[2.0.0,2.0.1)'
+
+skysail.server.ext.initconfig.version '[0.1.2,0.1.3)'
+
+# EOL
+#skysail.server.ext.ramlconsole.webresource.version '[0.2.0,0.2.1)'
+
+# remote: 0.3.1
+skysail.client.testsupport.version '[1.0.0,1.0.1)'
+
+skysail.server.app.demo.version '[1.0.0,1.0.1)'
+skysail.server.app.demo.it.version '[1.0.0,1.0.1)'
+
+skysail.server.text.store.db.version '[0.1.0,0.1.1)'
+
+skysail.server.app.svgedit.version '[0.1.0,0.1.1)'
+
+com.fasterxml.jackson.version '[2.8.5,2.8.6)'
+restlet.version 2.3.9
+guava.version 16.0
+org.apache.felix.framework.version '[5.4,6)'
+org.apache.felix.scr.version '[2.0.2, 2.0.3)'
+org.hibernate.validator.version 5.2.4.Final
+com.orientechnologies.orientdb.version '[2.1.3, 2.1.4)'
+osgi.version '[6.0.0,6.0.1)'
+osgi.annotation.version '[6.0.1,6.0.2)'
+
+lombok.version 0.16.10
+
+Bundle-Vendor: graefundpartner http://www.graefundpartner.de
+Bundle-Copyright: ${copyright}
+Bundle-License: http://www.opensource.org/licenses/apache2.0.php;\
+description="Apache 2.0 Licensed";\
+link=LICENSE
+
+
+## If you use git, you might want to uncomment the following lines:
+# Git-Descriptor: ${system-allow-fail;git describe --dirty --always}
+# Git-SHA: ${system-allow-fail;git rev-list -1 HEAD}
+# -diffignore: Git-Descriptor,Git-SHA

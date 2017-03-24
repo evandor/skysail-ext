@@ -1,0 +1,2 @@
+skysail.server.um:\
+    skysail.server.um.shiro;version=${skysail.server.um.shiro.version}
