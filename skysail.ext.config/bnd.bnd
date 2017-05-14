@@ -1,19 +1,19 @@
 Bundle-Name: SKYSAIL :: server :: ext :: skysail.ext.config
 
-Bundle-Version: 0.1.1.${tstamp}
+Bundle-Version: 0.1.2.${tstamp}
+
+-includeresource: OSGI-OPT/src=src/
 
 -buildpath: \
     ${osgi},\
     org.osgi.service.event;version=1.3,\
     ${restlet},\
-    skysail.server;version=${skysail.server.version},\
-    skysail.server.queryfilter;version=${skysail.server.queryfilter.version},\
-    skysail.server.db;version=${skysail.server.db.version},\
+    skysail.core;version=latest,\
     ${logging},\
     ${commons},\
     ${javax},\
+	com.google.guava;version='[16.0,16.1)',\
     de.twentyeleven.skysail.org.json-osgi;version=20080701.0,\
     com.fasterxml.jackson.core.jackson-annotations;version=2.5
 
-Private-Package: \
-	io.skysail.ext.config.app
+Private-Package: io.skysail.ext.config.app

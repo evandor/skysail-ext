@@ -1,15 +1,14 @@
 package io.skysail.ext.config.app
 
-import io.skysail.domain.Entity
-import io.skysail.domain.html.Field
-import io.skysail.domain.html.InputType
 import javax.validation.constraints.Size
 import org.osgi.service.cm.Configuration
 import scala.collection.JavaConversions._
+import io.skysail.domain.ddd.ScalaEntity
+import io.skysail.core.html.Field
 
-class Config(c: Configuration) extends Entity {
-  @Field var id: String = null
-  def getId(): String = c.getPid
+class Config(c: Configuration) extends ScalaEntity[String] {
+  @Field var id: Option[String] = None
+  override def getId() = c.getPid
 }
 
 class ConfigDetails(c: Configuration) extends Config(c) {

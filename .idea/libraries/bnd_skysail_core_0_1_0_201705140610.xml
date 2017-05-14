@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="bnd:skysail.core:0.1.0.201705140610">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/cnf/localrepo/skysail.core/skysail.core-0.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/cnf/localrepo/skysail.core/skysail.core-0.1.0.jar!/OSGI-OPT/src" />
+    </SOURCES>
+  </library>
+</component>

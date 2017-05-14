@@ -17,17 +17,47 @@
 skysail.config.path            = config/common,config/local
 logback.configurationFile.path = config/local
 
+#skysail.server.um:\
+#    org.apache.shiro.core;version=1.2,\
+#    org.apache.shiro.web;version=1.2,\
+#	skysail.server.um.repository.filebased;version=${skysail.server.um.repository.filebased.version},\
+#    skysail.server.um.shiro;version=${skysail.server.um.shiro.version}
+
+#-runbundles: \
+#	${serverbundles-minimal-1.0.0},\
+#    ${orientdb},\
+#    ${jetty},\
+#	skysail.server.ui.jquery;version=latest,\
+#    skysail.server.ui.bootstrap;version=latest,\
+#	skysail.ext.config;version=latest,\
+#	org.scala-lang.scala-library;version=2.11.8
+	
 skysail.server.um:\
+	skysail.um.shiro;version=latest,\
+    skysail.um.repo.test;version=latest,\
     org.apache.shiro.core;version=1.2,\
     org.apache.shiro.web;version=1.2,\
-	skysail.server.um.repository.filebased;version=${skysail.server.um.repository.filebased.version},\
-    skysail.server.um.shiro;version=${skysail.server.um.shiro.version}
+
+#    skysail.um.httpbasic;version=latest
+
+#	skysail.server.um.repository.filebased;version=${skysail.server.um.repository.filebased.version},\
 
 -runbundles: \
+	webconsole.all;version=latest,\
 	${serverbundles-minimal-1.0.0},\
-    ${orientdb},\
-    ${jetty},\
-	skysail.server.ui.jquery;version=latest,\
-    skysail.server.ui.bootstrap;version=latest,\
+	${orientdb},\
+	${jetty},\
+	skysail.converter;version=latest,\
+	skysail.queryfilter;version=latest,\
+	skysail.core;version=latest,\
+	skysail.http.jetty;version=latest,\
+	skysail.repo.orientdb;version=latest,\
 	skysail.ext.config;version=latest,\
-	org.scala-lang.scala-library;version=2.11.8
+	skysail.ui.raw;version=latest,\
+	io.dropwizard.metrics.core;version=3.1.2,\
+	com.thoughtworks.paranamer;version=2.8,\
+	io.skysail.bundled.json4s_2.11-3.5.1;version=3.5,\
+	org.scala-lang.scala-library;version=2.11.8,\
+	org.scala-lang.scala-reflect;version=2.11.8
+	
+	

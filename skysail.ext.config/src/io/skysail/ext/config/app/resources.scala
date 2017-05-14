@@ -1,25 +1,28 @@
 package io.skysail.ext.config.app
 
-import io.skysail.server.restlet.resources.EntityServerResource
-import io.skysail.domain.GenericIdentifiable
 import java.security.Principal
 import io.skysail.core.app.SkysailApplication
-import io.skysail.server.restlet.resources.ListServerResource
 import io.skysail.api.responses.SkysailResponse
-import io.skysail.server.queryfilter.filtering.Filter
-import io.skysail.server.queryfilter.pagination.Pagination
-import io.skysail.server.restlet.resources.{ PutEntityServerResource, PostEntityServerResource }
-import io.skysail.server.ResourceContextId
 
 import collection.JavaConversions._
+import io.skysail.restlet.resources.ListServerResource
+import io.skysail.restlet.ResourceContextId
+import io.skysail.restlet.resources.EntityServerResource
+import io.skysail.restlet.resources.EntityServerResource
+import io.skysail.api.doc._
 
 class ConfigsResource extends ListServerResource[Config](classOf[ConfigResource]) { // 
   addToContext(ResourceContextId.LINK_TITLE, "list Configs");
-  def getEntity(): java.util.List[Config] = getApplication().asInstanceOf[ConfigApplication].getConfigs().toSeq
-  override def getLinks() = super.getLinks(classOf[ConfigsResource])
+  setDescription("provides the list of configurations for this installation")
+
+  @ApiSummary("returns the list of OSGi-Admin-Configurations")
+  @ApiDescription("some description")
+  @ApiTags(Array("Config","Admin"))
+  def getEntity(): List[Config] = getApplication().asInstanceOf[ConfigApplication].getConfigs().toList
+  //override def getLinks() = super.getLinks(classOf[ConfigsResource])
 }
 
 class ConfigResource extends EntityServerResource[ConfigDetails] {
-  def getEntity(): ConfigDetails = getApplication().asInstanceOf[ConfigApplication].getConfig(getAttribute("id"))
-  override def getLinks() = super.getLinks(classOf[ConfigResource])
+  override def getEntity(): ConfigDetails = getSkysailApplication().asInstanceOf[ConfigApplication].getConfig(getAttribute("id"))
+  //override def getLinks() = super.getLinks(classOf[ConfigResource])
 }

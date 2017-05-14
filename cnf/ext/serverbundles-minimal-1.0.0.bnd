@@ -26,15 +26,13 @@ serverbundles-minimal-1.0.0: \
     com.sun.el;version='[2.2.0,2.2.1)',\
     io.skysail.bundled.owasp-java-html-sanitizer;version='[20160422.1.0,20160422.1.1)',\
     de.twentyeleven.skysail.org.antlr.stringtemplate-osgi;version=4.0.8,\
-    skysail.server;version=${skysail.server.version},\
-    skysail.server.converter;version=${skysail.server.converter.version},\
-    skysail.server.db;version=${skysail.server.db.version},\
-    skysail.server.http;version=${skysail.server.http.version},\
-    skysail.server.polymer;version=${skysail.server.polymer.version},\
-    skysail.server.queryfilter;version=${skysail.server.queryfilter.version},\
-    skysail.server.text.markdown;version=${skysail.server.text.markdown.version},\
-    skysail.server.text.store.bundleresource;version=${skysail.server.text.store.bundleresource.version},\
     ${skysail.server.um}
-    
+
+#    skysail.server.text.markdown;version=${skysail.server.text.markdown.version},\
+#    skysail.server.text.store.bundleresource;version=${skysail.server.text.store.bundleresource.version},\
+#   skysail.server.polymer;version=${skysail.server.polymer.version},\
+#    skysail.server.queryfilter;version=${skysail.server.queryfilter.version},\
+#    skysail.server;version=${skysail.server.version},\    
 #    skysail.server.text.store.git;version=${skysail.server.text.store.git.version},\
+#    skysail.server.converter;version=${skysail.server.converter.version},\
     
