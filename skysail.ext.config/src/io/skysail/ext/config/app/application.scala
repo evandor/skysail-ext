@@ -46,12 +46,6 @@ class ConfigApplication extends SkysailApplication(
     router.attach(new RouteBuilder("/configs/{id}", classOf[ConfigResource]));
   }
 
-//  override def getMenuEntries(): java.util.List[MenuItem] = {
-//    val appMenu = new MenuItem(getName(), "/" + getName() + getApiVersion().getVersionPath());
-//    appMenu.setCategory(MenuItem.Category.ADMIN_MENU);
-//    return Arrays.asList(appMenu);
-//  }
-
   def getConfigs() = configAdmin.listConfigurations(null).map(x => new Config(x))
   def getConfig(pid: String): ConfigDetails = new ConfigDetails(configAdmin.getConfiguration(pid))
 }

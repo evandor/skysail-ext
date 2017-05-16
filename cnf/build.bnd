@@ -17,8 +17,8 @@ skysail.domain.version '[8.0.1,8.0.2)'
 # remote: 5.0.0
 skysail.api.version '[5.0.0,5.0.1)'
 
-# remote: 7.0.0
-skysail.server.version '[7.0.0,7.0.1)'
+# remote: 0.1.0
+skysail.core.version '[0.1.0,0.1.1)'
 
 # remote: 2.0.0
 skysail.server.converter.version '[2.0.0,2.0.1)'
