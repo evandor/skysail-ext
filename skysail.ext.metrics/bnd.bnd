@@ -9,7 +9,7 @@ Provide-Capability: io.skysail.api.metrics
 	${common},\
 	${testlibs},\
 	${javax},\
-	skysail.server;version=${skysail.server.version},\
+	skysail.core;version=${skysail.core.version},\
 	org.apache.felix.gogo.runtime;version=0.16,\
 	javassist;version=3.18,\
 	io.dropwizard.metrics.core;version=3.1

@@ -1,0 +1,10 @@
+build.commands=org.scala-ide.sdt.core.scalabuilder
+connection.arguments=
+connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
+connection.java.home=null
+connection.jvm.arguments=
+connection.project.dir=..
+derived.resources=.gradle,generated
+eclipse.preferences.version=1
+natures=org.eclipse.jdt.core.javanature
+project.path=\:skysail.ext.metrics
