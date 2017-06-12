@@ -2,7 +2,6 @@ package io.skysail.ext.config.app
 
 import java.security.Principal
 import io.skysail.core.app.SkysailApplication
-import io.skysail.api.responses.SkysailResponse
 
 import collection.JavaConversions._
 import io.skysail.restlet.resources.ListServerResource
@@ -11,7 +10,7 @@ import io.skysail.restlet.resources.EntityServerResource
 import io.skysail.restlet.resources.EntityServerResource
 import io.skysail.api.doc._
 
-class ConfigsResource extends ListServerResource[Config](classOf[ConfigResource]) { // 
+class ConfigsResource extends ListServerResource[List[Config]](classOf[ConfigResource]) { // 
   addToContext(ResourceContextId.LINK_TITLE, "list Configs");
   setDescription("provides the list of configurations for this installation")
 
