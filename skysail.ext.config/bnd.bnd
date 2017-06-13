@@ -1,6 +1,6 @@
 Bundle-Name: SKYSAIL :: server :: ext :: skysail.ext.config
 
-Bundle-Version: 0.1.2.${tstamp}
+Bundle-Version: 0.1.3.${tstamp}
 
 -includeresource: OSGI-OPT/src=src/
 
