@@ -6,5 +6,5 @@ connection.jvm.arguments=
 connection.project.dir=..
 derived.resources=.gradle,generated
 eclipse.preferences.version=1
-natures=org.scala-ide.sdt.core.scalanature,org.eclipse.jdt.core.javanature
+natures=org.eclipse.jdt.core.javanature
 project.path=\:skysail.ext.metrics
