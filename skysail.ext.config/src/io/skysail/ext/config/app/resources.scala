@@ -4,10 +4,10 @@ import java.security.Principal
 import io.skysail.core.app.SkysailApplication
 
 import collection.JavaConversions._
-import io.skysail.restlet.resources.ListServerResource
-import io.skysail.restlet.ResourceContextId
-import io.skysail.restlet.resources.EntityServerResource
-import io.skysail.restlet.resources.EntityServerResource
+import io.skysail.core.restlet.resources.ListServerResource
+import io.skysail.core.restlet.ResourceContextId
+import io.skysail.core.restlet.resources.EntityServerResource
+import io.skysail.core.restlet.resources.EntityServerResource
 import io.skysail.api.doc._
 
 class ConfigsResource extends ListServerResource[List[Config]](classOf[ConfigResource]) { // 

@@ -11,7 +11,7 @@ import scala.collection.JavaConverters._
 import io.skysail.core.app.ApplicationProvider
 import io.skysail.core.ApiVersion
 import io.skysail.core.app.ApplicationConfiguration
-import io.skysail.restlet.RouteBuilder
+import io.skysail.core.restlet.RouteBuilder
 import io.skysail.core.model.APPLICATION_CONTEXT_RESOURCE
 
 object ConfigApplication {
