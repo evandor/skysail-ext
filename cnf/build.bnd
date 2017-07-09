@@ -17,6 +17,7 @@ skysail.core.version '[1.0.1,1.0.2)'
 
 com.fasterxml.jackson.version '[2.8.5,2.8.6)'
 restlet.version 2.3.9
+akka.version                                       '[2.5,2.6)'
 guava.version 16.0
 org.apache.felix.framework.version '[5.4,6)'
 org.apache.felix.scr.version '[2.0.2, 2.0.3)'

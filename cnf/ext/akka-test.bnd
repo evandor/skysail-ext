@@ -1,0 +1,3 @@
+akka-test: \
+	com.typesafe.akka.testkit;version=${akka.version},\
+	com.typesafe.akka.http.testkit;version=10.0   
